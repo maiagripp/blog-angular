@@ -1,0 +1,34 @@
+.menu{
+    height: 90px;
+    background: linear-gradient(180deg, rgba(255,255,255, 0.4) 0%, rgba(255,255,255,0) 100%);
+}
+
+.menu-list{
+    list-style: none;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    gap: 20px;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.menu-list-item{
+    margin: 0 20px;
+}
+
+.menu-list-item a{
+    color: #1C0C5B;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.logo{
+    width: 30px;
+    height: 43px;
+}
+
+.menu-list-item a:hover{
+    color: #916BBF;
+}
+
