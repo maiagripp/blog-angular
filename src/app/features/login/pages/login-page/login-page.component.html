@@ -1,0 +1,11 @@
+<app-header></app-header>
+    <div class="login">
+        <div class="form-field">
+            <input type="text" [(ngModel)]="email" placeholder="Digite seu Email">
+        </div>
+        <div class="form-field">
+            <input type="password" [(ngModel)]="senha" placeholder="Digite sua senha">
+        </div>
+        <p class="error" *ngIf="erro">Usuário/senha inválidos!</p>
+        <button (click)="authentication()">Enviar</button>
+    </div>
