@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Post } from '../../models/posts.model';
 
 @Component({
   selector: 'app-post',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  card?: Boolean;
+
+  @Input()
+  post?: Post;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  postDetails() {
+    this.router.navigateByUrl(`post-details/${this.post?.id}`);
+  }
 }

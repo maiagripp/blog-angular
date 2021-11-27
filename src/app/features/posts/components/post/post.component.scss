@@ -1,0 +1,33 @@
+.card {
+  width: 500px;
+  height: 400px;
+  background-color: #fff;
+  box-shadow: 10px 8px 27px -15px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+
+  button {
+    width: 50%;
+    height: 35px;
+    font-size: 18px;
+    background-color: #99feff;
+    border-radius: 5px;
+    border: transparent;
+    color: #6d8299;
+    box-shadow: 10px 8px 27px -15px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  .resume {
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow:ellipsis; 
+    width: 400px; 
+  }
+}

@@ -1,1 +1,14 @@
-<p>post works!</p>
+<div class="card" *ngIf="card">
+    <h2>{{post?.title | titlecase}}</h2>
+    <p class="resume">{{post?.text}}</p>
+    <p>Data criação: {{post?.dataInclusao}}</p>
+    <p>Autor: {{post?.author | uppercase}}</p>
+    <button (click)="postDetails()">Ver Post</button>
+</div>
+
+<div class="card" *ngIf="!card">
+    <h2>{{post?.title | titlecase}}</h2>
+    <p>{{post?.text}}</p>
+    <p>Data criação: {{post?.dataInclusao}}</p>
+    <p>Autor: {{post?.author | uppercase}}</p>
+</div>

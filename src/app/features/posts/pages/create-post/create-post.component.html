@@ -1,1 +1,23 @@
-<p>create-post works!</p>
+<app-header></app-header>
+<div class="form-container">
+<form [formGroup]="postForm" (submit)="createPost()">
+    <div class="form-field">
+        <label>Título:</label>
+        <input type="text" formControlName="title" required>
+    </div>
+    <div class="form-field">
+        <label>Texto:</label>
+        <textarea formControlName="text"required [rows]="10"></textarea>
+    </div>
+    <div class="form-field">
+        <label>Data de inclusão:</label>
+        <input type="text" formControlName="dataInclusao">
+    </div>
+    <div class="form-field">
+        <label>Autor:</label>
+        <input type="text" formControlName="author" required />
+    </div>
+    <button type="submit">Enviar</button>
+</form>
+</div>
+<app-footer></app-footer>

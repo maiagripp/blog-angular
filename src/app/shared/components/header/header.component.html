@@ -1,1 +1,8 @@
-<p>header works!</p>
+<nav>
+    <ul>
+        <li [routerLink]="['/post-page']"><img class="logo" src="../../../../assets/images/logo_transparent.png"></li>
+        <li [routerLink]="['/login']" *ngIf="!author">Login</li>
+        <li [routerLink]="['/create-post']" *ngIf="author">Criar post</li>
+        <li  [routerLink]="['/post-page']"(click)="exit()" *ngIf="author">Sair</li>
+    </ul>
+</nav>

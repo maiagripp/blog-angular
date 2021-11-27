@@ -5,27 +5,25 @@ import { SharedModule } from './shared/shared.module'
 import { PostsModule } from './features/posts/posts.module'
 import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './features/login/login.module'
-import { LOCALE_ID } from '@angular/core'
-import localePt from '@angular/common/pt'
 import { registerLocaleData } from '@angular/common';
-import { PostDetailsComponent } from './features/posts/components/post-details/post-details.component';
-import { PostListComponent } from './features/posts/components/post-list/post-list.component';
-import { PostsPageComponent } from './features/posts/pages/posts/posts.page';
+import { LOCALE_ID } from '@angular/core';
+import localePt from '@angular/common/locales/pt';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/modules/material/material.module';
+
 registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostDetailsComponent,
-    PostListComponent,
-    PostsPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
     PostsModule,
-    LoginModule
+    LoginModule,
+    NoopAnimationsModule,
+    MaterialModule
   ],
   providers: [
     {

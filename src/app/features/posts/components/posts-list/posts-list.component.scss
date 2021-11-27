@@ -1,0 +1,18 @@
+.container-cards{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.search-container{
+    margin: 30px;
+
+    input{
+        margin-left: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 10px 8px 27px -15px rgba(0,0,0,0.75);
+    }
+}

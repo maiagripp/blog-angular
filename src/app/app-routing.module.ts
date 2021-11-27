@@ -1,26 +1,24 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { LoginPageComponent } from './features/login/pages/login/login.page';
-import { PostModule } from './features/posts/posts.module';
-import { FooterComponent } from './shared/components/footer/footer.component';
-import { HeaderComponent } from './shared/components/header/header.component';
+import { LoginPageComponent } from './features/login/pages/login-page/login-page.component';
+import { CreatePostComponent } from './features/posts/pages/create-post/create-post.component';
+import { PostDetailsComponent } from './features/posts/pages/post-details/post-details.component';
+import { PostPageComponent } from './features/posts/pages/post-page/post-page.component';
+import { PostsModule } from './features/posts/posts.module';
+import { GuardsGuard } from './shared/guards/guards.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/posts', pathMatch: 'full' },
-  { path: 'posts', component: PostPageComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'post-page' },
+  { path: 'post-details/:id', component: PostDetailsComponent },
   { path: 'login', component: LoginPageComponent },
-  { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule) }
+  { path: 'create-post', component: CreatePostComponent, canActivate: [GuardsGuard] },
+  { path: 'post-page', component: PostPageComponent}
 ];
 
 @NgModule({
-  declarations: [],
   imports:
-    [CommonModule,
-      PostModule,
-      RouterModule.forRoot(routes)
-    ],
+    [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

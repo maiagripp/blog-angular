@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    LoginPageComponent
+    LoginPageComponent,
   ],
   imports: [
     CommonModule,
@@ -17,3 +17,4 @@ import { FormsModule } from '@angular/forms';
   ]
 })
 export class LoginModule { }
+

@@ -1,1 +1,8 @@
-<p>posts-list works!</p>
+<div class="container-cards">
+<h1>Posts</h1>
+<div class="search-container">
+<input type="text" placeholder="Digite um tema" (keyup)="searchByTheme($event)">
+<input type="text" placeholder="Busca por autor" (keyup)="searchByAuthor($event)">
+</div>
+<app-post *ngFor="let item of filteredPosts" [post]="item" [card]="true"></app-post>
+</div>
