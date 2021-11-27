@@ -14,7 +14,7 @@ export class CreatePostComponent implements OnInit {
 
   postForm = new FormGroup({
     title: new FormControl('', [Validators.required]),
-    texto: new FormControl('', [Validators.required]),
+    text: new FormControl('', [Validators.required]),
     dataInclusao: new FormControl(this.post.dataInclusao),
     author: new FormControl(this.post.author),
   });
@@ -32,6 +32,8 @@ export class CreatePostComponent implements OnInit {
     this.post.title = formValue.title;
     this.post.text = formValue.text;
     this.post.author = formValue.author;
+
+    console.log(formValue.text)
 
     this.postService.createPost(this.post);
     alert('Post adicionado com sucesso!');

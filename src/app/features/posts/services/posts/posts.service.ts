@@ -17,7 +17,7 @@ export class PostsService {
     {
       id: 2,
       title: 'Do laboris proident ut reprehenderit cupidatat magna.',
-      text: 'qualquer coisa',
+      text: 'Outro post sobre um assunto muito importante',
       dataInclusao: '23/11/2021',
       author: 'Eduardo Almeida'
     },
