@@ -23,7 +23,8 @@ registerLocaleData(localePt)
     PostsModule,
     LoginModule,
     NoopAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ],
   providers: [
     {
